@@ -70,6 +70,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "octofit_tracker.wsgi.application"
 
+# django use djongo to connect to MongoDB
+
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 # 

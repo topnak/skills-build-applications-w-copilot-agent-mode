@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -36,6 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'corsheaders',
     'octofit_tracker',
+    # Add any additional apps here if needed
 ]
 
 MIDDLEWARE = [
@@ -73,12 +75,8 @@ WSGI_APPLICATION = "octofit_tracker.wsgi.application"
 
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'octofit_db',
-        'CLIENT': {
-            'host': 'localhost',
-            'port': 27017,
-        },
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -117,6 +115,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = "/static/"
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.1/ref/settings/#default-auto-field

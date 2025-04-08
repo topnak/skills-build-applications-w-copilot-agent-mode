@@ -9,8 +9,8 @@ test_data = {
         {"name": "Team Alpha", "members": ["john_doe", "jane_doe"]},
     ],
     "activities": [
-        {"user": "john_doe", "activity_type": "Running", "duration": "30 minutes"},
-        {"user": "jane_doe", "activity_type": "Cycling", "duration": "45 minutes"},
+        {"user": "john_doe", "activity_type": "Running", "duration": parse_duration("30 minutes")},
+        {"user": "jane_doe", "activity_type": "Cycling", "duration": parse_duration("45 minutes")},
     ],
     "leaderboard": [
         {"user": "john_doe", "score": 100},

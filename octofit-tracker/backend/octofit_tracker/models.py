@@ -1,11 +1,10 @@
 from djongo import models
 
-class User(models.Model):
-    _id = models.ObjectIdField()
-    username = models.CharField(max_length=100)
-    email = models.EmailField(unique=True)
-    password = models.CharField(max_length=100)
+from django.contrib.auth.models import User
 
+class UserProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    _id = models.ObjectIdField()
 class Team(models.Model):
     _id = models.ObjectIdField()
     name = models.CharField(max_length=100)

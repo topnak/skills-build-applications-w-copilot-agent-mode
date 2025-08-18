@@ -1,0 +1,17 @@
+# Azure Custom Vision AI ONNX Model RTSP Stream Detector Requirements
+
+# Core dependencies
+opencv-python>=4.8.0
+onnxruntime>=1.16.0
+numpy>=1.24.0
+
+# Optional GPU acceleration (uncomment if you have NVIDIA GPU)
+# onnxruntime-gpu>=1.16.0
+
+# Additional utilities
+Pillow>=10.0.0
+argparse
+
+# Development and debugging (optional)
+# matplotlib>=3.7.0
+# seaborn>=0.12.0
